@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Eclectic Golf Scorecard</title>
+<style>
+  body { margin: 0; font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+         background: #3F8A45; color: #fff; text-align: center; padding: 48px 20px; }
+  h1 { font-size: 2rem; margin: 0 0 8px; }
+  p { margin: 0 0 32px; opacity: .9; }
+  a { display: block; max-width: 320px; margin: 0 auto 16px; padding: 16px; border-radius: 12px;
+      background: #14472F; color: #fff; font-weight: 700; text-decoration: none; border: 3px solid #E8C766; }
+</style>
+<script>
+  // TODO: put the real store links here once the app is live.
+  var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.offscriptlogic.eclectic";
+  var APP_STORE  = "https://apps.apple.com/app/idYOUR_APP_ID";
+
+  // Send each phone straight to its own store.
+  var ua = navigator.userAgent || "";
+  if (/android/i.test(ua)) location.replace(PLAY_STORE);
+  else if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && "ontouchend" in document)) location.replace(APP_STORE);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("play").href = PLAY_STORE;
+    document.getElementById("apple").href = APP_STORE;
+  });
+</script>
+</head>
+<body>
+  <h1>Eclectic Golf Scorecard</h1>
+  <p>Track your best score on every hole. Choose your phone:</p>
+  <a id="apple" href="#">Download on the App Store</a>
+  <a id="play" href="#">Get it on Google Play</a>
+  <p style="margin-top:32px;font-size:.9rem"><a href="privacy.html" style="display:inline;background:none;border:0;padding:0;text-decoration:underline;font-weight:400">Privacy policy</a></p>
+</body>
+</html>
