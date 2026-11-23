@@ -15,23 +15,25 @@
 <script>
   // TODO: put the real store links here once the app is live.
   var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.offscriptlogic.eclectic";
-  var APP_STORE  = "https://apps.apple.com/app/idYOUR_APP_ID";
+  // iOS not released yet – uncomment when the App Store link exists.
+  // var APP_STORE  = "https://apps.apple.com/app/idYOUR_APP_ID";
 
   // Send each phone straight to its own store.
   var ua = navigator.userAgent || "";
   if (/android/i.test(ua)) location.replace(PLAY_STORE);
-  else if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && "ontouchend" in document)) location.replace(APP_STORE);
+  // else if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && "ontouchend" in document)) location.replace(APP_STORE);
 
   document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("play").href = PLAY_STORE;
-    document.getElementById("apple").href = APP_STORE;
+    // document.getElementById("apple").href = APP_STORE;
   });
 </script>
 </head>
 <body>
   <h1>Eclectic Golf Scorecard</h1>
-  <p>Track your best score on every hole. Choose your phone:</p>
-  <a id="apple" href="#">Download on the App Store</a>
+  <!-- <p>Track your best score on every hole. Choose your phone:</p> -->
+  <p>Track your best score on every hole. Available now for Android:</p>
+  <!-- <a id="apple" href="#">Download on the App Store</a> -->
   <a id="play" href="#">Get it on Google Play</a>
   <p style="margin-top:32px;font-size:.9rem"><a href="privacy.html" style="display:inline;background:none;border:0;padding:0;text-decoration:underline;font-weight:400">Privacy policy</a></p>
 </body>
